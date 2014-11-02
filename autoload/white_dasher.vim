@@ -13,16 +13,18 @@ endif
 
 
 
-" todo: let g:enter_automally_insertmode
 function! white_dasher#dash()
     let l:selected_char = nr2char(getchar())
     let l:line_number = line('.')
+    let l:now_col = getpos('.')[2]
+
     if g:white_dasher#seek_top
         let l:seek_line = getline(line_number - 1)
     else " g:white_dasher#seek_top == 0
         let l:seek_line = getline(line_number + 1)
     endif
-    let l:matched_col = match(l:seek_line, '[' . l:selected_char . ']')
+
+    let l:matched_col = match(l:seek_line, '[' . l:selected_char . ']', l:now_col)
 
     if l:matched_col == -1  " not found
         return
@@ -34,6 +36,10 @@ function! white_dasher#dash()
         call setline(l:line_number, l:new_line_s)
         call cursor(l:line_number, len(l:new_line_s) + 1)
     endif
+endfunction
+
+function! white_dasher#dash_and_enter_insertmode()
+    call white_dasher#dash()
 endfunction
 
 
