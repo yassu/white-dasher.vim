@@ -14,7 +14,7 @@ set cpo&vim
 if (exists('g:white_dasher_default_key_mappings')
 	\ && g:white_dasher_default_key_mappings) ||
 	\ !exists('g:white_dasher_default_key_mappings')
-	nnoremap <silent><Leader>d :call white_dasher#dash()<cr>
+	nnoremap <silent><Leader>f :call white_dasher#dash()<cr>
 endif
 
 
