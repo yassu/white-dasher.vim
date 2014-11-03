@@ -38,10 +38,5 @@ function! white_dasher#dash()
     endif
 endfunction
 
-function! white_dasher#dash_and_enter_insertmode()
-    call white_dasher#dash()
-endfunction
-
-
 let &cpo = s:save_cpo
 unlet s:save_cpo
