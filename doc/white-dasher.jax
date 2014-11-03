@@ -53,7 +53,7 @@ white-dasher#dash ユーザーからの入力として一文字を受け付け�
 
 g:white_dasher_default_key_mappings この値が0以外の場合にはデフォルトのキーマッピングを定義します.
                                     この値が0の場合にはデフォルトのキーマッピングを定義しません.
-g:white_dasher_seek_top             この値が0以外である場合にはwhite-dasher#dash関数が呼びだされた
+g:white_dasher_seek_top             この値が0以外である場合には`white-dasher#dash`関数が呼びだされた
                                     時には上行の文字を見ます.
                                     この値が0の場合には下行の文字を見ます.
 
