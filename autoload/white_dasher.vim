@@ -28,8 +28,6 @@ function! white_dasher#dash()
 
     if l:matched_col == -1  " not found
         return
-    elseif l:matched_col < len(getline('.'))
-        call cursor(l:line_number, l:matched_col + 1)
     else
         let l:line_s = getline('.')
         let l:new_line_s = l:line_s . repeat(' ', l:matched_col - len(l:line_s) + 1)
